@@ -1,3 +1,3 @@
-## 1.0.0
+## 0.0.1
 
-- Date/Datetime label widget.
+- Date label widget 001 & 002.
