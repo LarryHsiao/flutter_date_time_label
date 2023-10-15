@@ -6,7 +6,6 @@ class DateLabel001 extends StatelessWidget {
   final bool showYear;
 
   const DateLabel001._({
-    super.key,
     required this.dateTime,
     required this.showYear,
   });

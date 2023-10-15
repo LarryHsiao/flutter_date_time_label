@@ -8,7 +8,6 @@ class DateLabel002 extends StatelessWidget {
   final bool showWeekday;
 
   const DateLabel002._({
-    super.key,
     required this.dateTime,
     required this.showWeekday,
   });

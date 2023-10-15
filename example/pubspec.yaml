@@ -10,13 +10,13 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
+  flutter_date_time_label:
+    path: ../
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.3
-  flutter_date_time_label:
-    path: ../
 
 flutter:
   uses-material-design: true
