@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' show DateFormat;
 
+/// 001 style of the date label.
 class DateLabel001 extends StatelessWidget {
-  final DateTime dateTime;
-  final bool showYear;
+  final DateTime _dateTime;
+  final bool _showYear;
 
   const DateLabel001._({
-    required this.dateTime,
-    required this.showYear,
-  });
+    required DateTime dateTime,
+    required bool showYear,
+  })  : _showYear = showYear,
+        _dateTime = dateTime;
 
+  /// factory
   factory DateLabel001({DateTime? dateTime, bool? showYear}) {
     return DateLabel001._(
       dateTime: dateTime ?? DateTime.now(),
@@ -25,16 +28,16 @@ class DateLabel001 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            DateFormat('MM.dd').format(dateTime),
+            DateFormat('MM.dd').format(_dateTime),
             style: Theme.of(context).textTheme.displayLarge,
           ),
           const SizedBox(width: 16),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              showYear
+              _showYear
                   ? Text(
-                      DateFormat('yyyy').format(dateTime).toUpperCase(),
+                      DateFormat('yyyy').format(_dateTime).toUpperCase(),
                       style: Theme.of(context).textTheme.titleLarge,
                     )
                   : Text(
@@ -42,7 +45,7 @@ class DateLabel001 extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
               Text(
-                DateFormat('EEE').format(dateTime).toUpperCase(),
+                DateFormat('EEE').format(_dateTime).toUpperCase(),
                 style: Theme.of(context).textTheme.titleLarge,
               ),
             ],
