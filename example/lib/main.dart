@@ -42,6 +42,10 @@ class _ExamplePageState extends State<ExamplePage> {
               dateTime: DateTime.now(),
               showYear: true,
             ),
+            DateLabel002(
+              dateTime: DateTime.now(),
+              showWeekday: true,
+            ),
           ],
         ),
       ),

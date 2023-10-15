@@ -13,3 +13,14 @@ DateLabel001(
   showYear: true,
 );
 ```
+
+### DateLabel002
+
+![](doc/date_label_002.png)
+
+```dart
+DateLabel002(
+  dateTime: DateTime.now(),
+  showWeekday: true,
+);
+```
