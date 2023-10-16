@@ -63,12 +63,12 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_date_time_label:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.3"
   flutter_lints:
     dependency: "direct dev"
     description:

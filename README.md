@@ -24,3 +24,14 @@ DateLabel002(
   showWeekday: true,
 );
 ```
+
+### DateLabel003
+
+![](doc/date_label_003.png)
+
+```dart
+DateLabel003(
+  dateTime: DateTime.now(),
+  showWeekday: true,
+);
+```

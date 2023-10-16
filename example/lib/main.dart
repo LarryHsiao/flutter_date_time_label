@@ -42,7 +42,13 @@ class _ExamplePageState extends State<ExamplePage> {
               dateTime: DateTime.now(),
               showYear: true,
             ),
+            const Divider(),
             DateLabel002(
+              dateTime: DateTime.now(),
+              showWeekday: true,
+            ),
+            const Divider(),
+            DateLabel003(
               dateTime: DateTime.now(),
               showWeekday: true,
             ),
