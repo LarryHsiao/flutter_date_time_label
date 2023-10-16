@@ -7,31 +7,17 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-    name: install dependencies
-    runs-on: ubuntu-latest
-    steps:  
-    - uses: jddeep/Flutter-Runner@1.2.0
-    - name: clean stale build and cache
-      uses: ./action
-      with:
-        args: clean
-    - name: install dependencies
-      uses: ./action
-      with:
-        args: pub get
-
-    - name: Verify formatting
-      uses: ./action
-      with: 
-        args: format --output=none --set-exit-if-changed .
-
-    - name: Analyze project source
-      uses: ./action
-      with: 
-        args: analyze --fatal-infos
-
-    - name: Run tests
-      uses: ./action
-      with: 
-        args: analyze --fatal-infos
+  main:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Flutter SDK
+        uses: mobiledevops/flutter-sdk-action@v1.0.0
+        with:
+          flutter-sdk-version: 3.7.7
+      - run: flutter --version
+      - run: flutter doctor
+      - run: flutter pub get
+      - run: flutter test
+      - run: flutter format --output=none --set-exit-if-changed .
+      - run: flutter analyze --fatal-infos
