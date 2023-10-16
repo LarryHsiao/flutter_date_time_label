@@ -8,19 +8,30 @@ on:
 
 jobs:
   build:
+    name: install dependencies
     runs-on: ubuntu-latest
+    steps:  
+    - uses: jddeep/Flutter-Runner@1.2.0
+    - name: clean stale build and cache
+      uses: ./action
+      with:
+        args: clean
+    - name: install dependencies
+      uses: ./action
+      with:
+        args: pub get
 
-    steps:
-      - uses: actions/checkout@v3
-      - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
-      - name: Install dependencies
-        run: dart pub get
+    - name: Verify formatting
+      uses: ./action
+      with: 
+        args: format --output=none --set-exit-if-changed .
 
-      - name: Verify formatting
-        run: dart format --output=none --set-exit-if-changed .
+    - name: Analyze project source
+      uses: ./action
+      with: 
+        args: analyze --fatal-infos
 
-      - name: Analyze project source
-        run: dart analyze --fatal-infos
-
-      - name: Run tests
-        run: flutter test
+    - name: Run tests
+      uses: ./action
+      with: 
+        args: analyze --fatal-infos
