@@ -38,9 +38,10 @@ class DateLabel001 extends StatelessWidget {
               _showYear
                   ? Text(
                       DateFormat('yyyy').format(_dateTime).toUpperCase(),
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontWeight: FontWeight.bold
-                      ),
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleLarge
+                          ?.copyWith(fontWeight: FontWeight.bold),
                     )
                   : Text(
                       "",
@@ -48,9 +49,10 @@ class DateLabel001 extends StatelessWidget {
                     ),
               Text(
                 DateFormat('EEE').format(_dateTime).toUpperCase(),
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold
-                ),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(fontWeight: FontWeight.bold),
               ),
             ],
           )

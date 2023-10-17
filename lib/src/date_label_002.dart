@@ -46,9 +46,10 @@ class DateLabel002 extends StatelessWidget {
                 ),
                 Text(
                   DateFormat("EEE").format(_dateTime),
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontWeight: FontWeight.bold
-                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge
+                      ?.copyWith(fontWeight: FontWeight.bold),
                 ),
               ],
             ),
