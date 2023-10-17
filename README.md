@@ -35,3 +35,24 @@ DateLabel003(
   showWeekday: true,
 );
 ```
+
+### DateLabel004
+
+![](doc/date_label_004.png)
+
+```dart
+DateLabel004(
+  dateTime: DateTime.now(),
+);
+```
+
+### DateLabel005
+
+![](doc/date_label_005.png)
+
+```dart
+DateLabel005(
+  dateTime: DateTime.now(),
+  showYear: true,
+);
+```

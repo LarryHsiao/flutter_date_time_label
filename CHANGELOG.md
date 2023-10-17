@@ -1,3 +1,8 @@
+## 0.0.5
+- DateLabel004
+- DateLabel005
+- fontWeight for weekday text.
+
 ## 0.0.4
 - DateLabel003
 

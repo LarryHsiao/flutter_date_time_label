@@ -52,6 +52,15 @@ class _ExamplePageState extends State<ExamplePage> {
               dateTime: DateTime.now(),
               showWeekday: true,
             ),
+            const Divider(),
+            DateLabel004(
+              dateTime: DateTime.now(),
+            ),
+            const Divider(),
+            DateLabel005(
+              dateTime: DateTime.now(),
+              showYear: true,
+            ),
           ],
         ),
       ),
