@@ -5,18 +5,22 @@ import 'package:intl/intl.dart';
 class DateLabel003 extends StatelessWidget {
   final DateTime _dateTime;
   final bool _showWeekday;
+  final Color _color;
 
   const DateLabel003._({
     required DateTime dateTime,
     required bool showWeekday,
+    required Color color,
   })  : _showWeekday = showWeekday,
-        _dateTime = dateTime;
+        _dateTime = dateTime,
+        _color = color;
 
   /// factory
-  factory DateLabel003({DateTime? dateTime, bool? showWeekday}) {
+  factory DateLabel003({DateTime? dateTime, bool? showWeekday, Color? color}) {
     return DateLabel003._(
       dateTime: dateTime ?? DateTime.now(),
       showWeekday: showWeekday ?? true,
+      color: color ?? Colors.black,
     );
   }
 
@@ -31,15 +35,19 @@ class DateLabel003 extends StatelessWidget {
             children: [
               Text(
                 DateFormat("yyyy").format(_dateTime),
-                style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                      fontStyle: FontStyle.italic,
-                    ),
+                style: TextStyle(
+                  fontSize: 60,
+                  fontStyle: FontStyle.italic,
+                  color: _color,
+                ),
               ),
               Text(
                 DateFormat("MM/dd").format(_dateTime),
-                style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                      fontStyle: FontStyle.italic,
-                    ),
+                style: TextStyle(
+                  fontSize: 60,
+                  fontStyle: FontStyle.italic,
+                  color: _color,
+                ),
               ),
             ],
           ),
@@ -47,9 +55,11 @@ class DateLabel003 extends StatelessWidget {
           if (_showWeekday)
             Text(
               DateFormat("EEE.").format(_dateTime).toLowerCase(),
-              style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                    fontStyle: FontStyle.italic,
-                  ),
+              style: TextStyle(
+                fontSize: 40,
+                fontStyle: FontStyle.italic,
+                color: _color,
+              ),
             ),
         ],
       ),

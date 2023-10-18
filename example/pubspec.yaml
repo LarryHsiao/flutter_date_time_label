@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_date_time_label:
     path: ../
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_date_time_label/flutter_date_time_label.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
   runApp(const ExampleApp());
@@ -31,6 +32,11 @@ class ExamplePage extends StatefulWidget {
 }
 
 class _ExamplePageState extends State<ExamplePage> {
+  @override
+  void initState() {
+    super.initState();
+    initializeDateFormatting();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

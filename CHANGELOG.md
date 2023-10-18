@@ -1,3 +1,7 @@
+## 0.0.6
+- Add color parameter
+- Fix TextStyles
+
 ## 0.0.5
 - DateLabel004
 - DateLabel005

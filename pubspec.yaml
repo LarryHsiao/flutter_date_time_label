@@ -1,6 +1,6 @@
 name: flutter_date_time_label
 description: A package for displaying date/time with different styles for quick implementation.
-version: 0.0.5
+version: 0.0.6
 repository: https://github.com/LarryHsiao/flutter_date_time_label
 
 environment:

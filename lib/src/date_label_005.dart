@@ -6,17 +6,22 @@ class DateLabel005 extends StatelessWidget {
   final DateTime _dateTime;
   final bool _showYear;
 
+  final Color _color;
+
   const DateLabel005._({
     required DateTime dateTime,
     required bool showYear,
+    required Color color,
   })  : _dateTime = dateTime,
-        _showYear = showYear;
+        _showYear = showYear,
+        _color = color;
 
   /// factory
-  factory DateLabel005({DateTime? dateTime, bool? showYear}) {
+  factory DateLabel005({DateTime? dateTime, bool? showYear, Color? color}) {
     return DateLabel005._(
       dateTime: dateTime ?? DateTime.now(),
       showYear: showYear ?? false,
+      color: color ?? Colors.black,
     );
   }
 
@@ -30,24 +35,30 @@ class DateLabel005 extends StatelessWidget {
         children: [
           Text(
             DateFormat('24').format(_dateTime),
-            style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  height: 1,
-                  fontWeight: FontWeight.bold,
-                ),
+            style: TextStyle(
+              fontSize: 60,
+              height: 1,
+              fontWeight: FontWeight.bold,
+              color: _color,
+            ),
           ),
           Text(
             DateFormat(' EEE.').format(_dateTime).toUpperCase(),
-            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                  height: 0.77,
-                  fontWeight: FontWeight.bold,
-                ),
+            style: TextStyle(
+              fontSize: 35,
+              height: 0.77,
+              fontWeight: FontWeight.bold,
+              color: _color,
+            ),
           ),
           if (_showYear)
             Text(
               DateFormat('yyyy').format(_dateTime).toUpperCase(),
-              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: _color,
+              ),
             ),
         ],
       ),

@@ -5,18 +5,22 @@ import 'package:intl/intl.dart' show DateFormat;
 class DateLabel001 extends StatelessWidget {
   final DateTime _dateTime;
   final bool _showYear;
+  final Color _color;
 
   const DateLabel001._({
     required DateTime dateTime,
     required bool showYear,
+    required Color color,
   })  : _showYear = showYear,
-        _dateTime = dateTime;
+        _dateTime = dateTime,
+        _color = color;
 
   /// factory
-  factory DateLabel001({DateTime? dateTime, bool? showYear}) {
+  factory DateLabel001({DateTime? dateTime, bool? showYear, Color? color}) {
     return DateLabel001._(
       dateTime: dateTime ?? DateTime.now(),
       showYear: showYear ?? false,
+      color: color ?? Colors.black,
     );
   }
 
@@ -29,30 +33,32 @@ class DateLabel001 extends StatelessWidget {
         children: [
           Text(
             DateFormat('MM.dd').format(_dateTime),
-            style: Theme.of(context).textTheme.displayLarge,
+            style: TextStyle(fontSize: 70, color: _color),
           ),
           const SizedBox(width: 16),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               _showYear
                   ? Text(
                       DateFormat('yyyy').format(_dateTime).toUpperCase(),
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleLarge
-                          ?.copyWith(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: _color,
+                      ),
                     )
-                  : Text(
+                  : const Text(
                       "",
-                      style: Theme.of(context).textTheme.titleLarge,
+                      style: TextStyle(fontSize: 25),
                     ),
               Text(
                 DateFormat('EEE').format(_dateTime).toUpperCase(),
-                style: Theme.of(context)
-                    .textTheme
-                    .titleLarge
-                    ?.copyWith(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: _color,
+                ),
               ),
             ],
           )
