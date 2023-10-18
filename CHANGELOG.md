@@ -1,3 +1,6 @@
+## 0.0.7
+- Downgrade dart sdk requirement.
+
 ## 0.0.6
 - Add color parameter
 - Fix TextStyles
