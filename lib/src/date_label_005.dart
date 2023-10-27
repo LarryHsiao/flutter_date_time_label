@@ -43,7 +43,7 @@ class DateLabel005 extends StatelessWidget {
             ),
           ),
           Text(
-            DateFormat(' EEE.').format(_dateTime).toUpperCase(),
+            DateFormat(' MMM.').format(_dateTime).toUpperCase(),
             style: TextStyle(
               fontSize: 35,
               height: 0.77,

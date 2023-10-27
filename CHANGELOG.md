@@ -1,3 +1,6 @@
+## 0.0.8
+- Mistaken month value at date_label_005.dart. 
+
 ## 0.0.7
 - Downgrade dart sdk requirement.
 
