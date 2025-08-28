@@ -1,3 +1,6 @@
+## 0.0.9
+- Build with 3.35.1 and dependency updates.
+
 ## 0.0.8
 - Mistaken month value at date_label_005.dart. 
 
