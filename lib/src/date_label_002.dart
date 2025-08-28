@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -13,7 +11,8 @@ class DateLabel002 extends StatelessWidget {
     required DateTime dateTime,
     required bool showWeekday,
     required Color color,
-  })  : _showWeekday = showWeekday,
+  })
+      : _showWeekday = showWeekday,
         _dateTime = dateTime,
         _color = color;
 
