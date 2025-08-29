@@ -11,10 +11,9 @@ class DateLabel002 extends StatelessWidget {
     required DateTime dateTime,
     required bool showWeekday,
     required Color color,
-  })
-      : _showWeekday = showWeekday,
-        _dateTime = dateTime,
-        _color = color;
+  }) : _showWeekday = showWeekday,
+       _dateTime = dateTime,
+       _color = color;
 
   /// factory
   factory DateLabel002({DateTime? dateTime, bool? showWeekday, Color? color}) {
@@ -37,9 +36,7 @@ class DateLabel002 extends StatelessWidget {
             style: TextStyle(
               height: 0.9,
               fontSize: 70,
-              fontFeatures: const <FontFeature>[
-                FontFeature.fractions(),
-              ],
+              fontFeatures: const <FontFeature>[FontFeature.fractions()],
               color: _color,
             ),
           ),
