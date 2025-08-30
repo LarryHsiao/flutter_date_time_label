@@ -1,3 +1,7 @@
+## 0.0.10
+- Flip weekday text of 004.
+- Fix Android example.
+
 ## 0.0.9
 - Build with 3.35.1 and dependency updates.
 

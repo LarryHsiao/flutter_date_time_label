@@ -39,7 +39,7 @@ class DateLabel004 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               RotatedBox(
-                quarterTurns: 1,
+                quarterTurns: -1,
                 child: Text(
                   DateFormat('EEE').format(_dateTime).toUpperCase(),
                   style: TextStyle(
